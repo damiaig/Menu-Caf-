@@ -16,18 +16,7 @@
     color: var(--wood-brown);
     line-height: 1.5;
   }
-  header {
-    background: var(--wood-brown);
-    color: var(--white);
-    padding: 1.5rem 1rem;
-    text-align: center;
-    font-size: 1.8rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    box-shadow: 0 3px 6px var(--shadow);
-  }
-
+ 
   header img {
     max-width: 100px;      /* Adjust this value to control the logo size */
     height: auto;          /* Keeps proportions */
@@ -245,3 +234,248 @@
       gap: 1.9rem;
     }
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .hero-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  width: 80%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  
+    z-index: 3; /* Above background overlay */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .hero-center h1 {
+    font-size: 4.5rem;
+    color: white;
+    margin: 0;
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  .hero-center .learn-more-btn {
+    opacity: 1;
+    animation: fadeInUp 1.2s ease-out;
+  }
+  
+  
+    .bg-image{
+    position: relative;
+    height: 900px;
+    background-color: #f0f0f0; /* or blur hash, tiny preview */
+    background-size: cover;
+    background-position: center;
+    z-index: 2 !important;
+    background-image: url('back.jpg');
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+  }
+
+  .bg-image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('back.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -2; /* Pushes image far back */
+  }
+  
+  .bg-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    z-index: -1; /* Sits on top of the image, behind all content */
+  }
+
+
+
+
+
+
+
+ 
+
+  
+  .learn-more-btn {
+    opacity: 0;
+    padding: 10px 20px;
+    border: 1px solid white;
+    background: transparent;
+    font-family: inherit;
+
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    z-index: 10;
+    align-self: center;
+    transition: background 0.3s ease, color 0.3s ease, opacity 0.6s ease;
+  }
+  
+  .learn-more-btn:hover {
+    background: white;
+    color: black;
+  }
+  
+ 
+  
+  .hero-center p {
+
+    color: white;
+    margin-top: 0;
+     /* remove spacing above p */
+    margin-bottom: 0px; /* optional: control space before button */
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+
+  
+
+ 
+ 
+  .hero-center p{
+    font-size: 1.2rem !important;
+    font-weight: 300 !important;
+    margin-bottom: 30px;
+  }
+
+
+
+
+
+  @media (max-width: 720px) {
+    .hero-center h1{
+        font-size: 3rem ;
+width: 500px;
+
+      }
+
+      .hero-center p{
+        font-size: 1.1rem !important;
+        width: 410px;
+      }
+  }
+
+
+
+  @media (max-width: 450px) {
+    .hero-center h1{
+        font-size: 2.4rem !important;
+width: 350px !important;
+
+      }
+
+      .hero-center p{
+        font-size: 1.0rem !important;
+        width: 350px !important;
+      }
+  }
+
+  @media (max-width: 1200px) {
+
+  .hero-center h1{
+    font-size: 3.5rem ;
+  }
+
+  .learn-more-btn {
+    opacity: 0;
+    padding: 10px 20px;
+    border: 1px solid white;
+    background: transparent;
+    font-family: inherit;
+
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    z-index: 10;
+    align-self: center;
+    transition: background 0.3s ease, color 0.3s ease, opacity 0.6s ease;
+  }
+  
+  .learn-more-btn:hover {
+    background: white;
+    color: black;
+  }
+  
+ 
+  
+  .hero-center p {
+
+    color: white;
+    margin-top: 0;
+     /* remove spacing above p */
+    margin-bottom: 0px; /* optional: control space before button */
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+
+  
+
+ 
+ 
+  .hero-center p{
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+  }}
+
+  .navi {
+
+padding-top: 10px;
+}
+
+
+
+
+/* Logo header centered with 20px vertical margin */
+.logo-header {
+  display: flex;
+  justify-content: center; /* center horizontally */
+  align-items: center;     /* center vertically if you later set a height */
+  margin: 50px 0;          /* 20px top and bottom space */
+  width: 100%;
+}
+
+/* Make the image behave nicely */
+.logo-header img {
+  max-width: 100px;      /* Adjust this value to control the logo size */
+    height: auto;          /* Keeps proportions */
+    display: block;        /* Ensures it centers correctly */
+    margin: 0 auto;        /* Centers horizontally */
+    object-fit: contain;
+}
